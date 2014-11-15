@@ -43,7 +43,12 @@ fn main() {
 		    	}
 		 };
 		println!("You chose algorithm {}", num);
-		print_vec_str(sort::bubble_sort(randArray));
+		match num {
+			0 => print_vec_str(sort::bubble_sort(randArray)),
+			1 => print_vec_str(sort::insertion_sort(randArray)),
+			_ => {println!("Wrong choice! Try again."); 
+					continue; },
+		}
 		println!("");
 		return;
 	}
