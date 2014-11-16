@@ -19,6 +19,22 @@ pub fn bubble_sort(array: Vec<uint>) -> Vec<uint> {
 
 pub fn insertion_sort(array: Vec<uint>) -> Vec<uint> {
 	let mut resultArray = array;
+	let mut key;
+	let mut i;
+
+	for j in range(1, resultArray.len()) {
+		key = resultArray[j];
+		i = j - 1;
+		while i >= 0 && resultArray[i] > key {
+			*resultArray.get_mut(i+1) = resultArray[i];
+			if i > 0 {
+				i = i - 1
+			} else {
+				break;
+			}
+		}
+		*resultArray.get_mut(i) = key
+	}
 
 	return resultArray;
 }

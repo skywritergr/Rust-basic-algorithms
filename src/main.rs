@@ -54,12 +54,14 @@ fn main() {
 	}
 }
 
+//function that prints a vector.
 fn print_vec_str(v: Vec<uint>) {
     for i in v.iter() {
         print!("{:u} ", *i)
     }
 }
 
+//function that reads the user input. 
 fn read_from_user() -> int {
 	let mut reader = io::stdin();
 
