@@ -46,6 +46,8 @@ fn main() {
 		match num {
 			0 => print_vec_str(sort::bubble_sort(randArray)),
 			1 => print_vec_str(sort::insertion_sort(randArray)),
+			2 => print_vec_str(sort::selection_sort(randArray)),
+			3 => print_vec_str(sort::merge_sort(randArray)),
 			_ => {println!("Wrong choice! Try again."); 
 					continue; },
 		}
